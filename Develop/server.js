@@ -29,12 +29,15 @@ app.post("/api/notes", (req, res) => {
   // should receive new note to save on req body add to db file and return new note to client.
   // give each note a unique id when its saved(look at npm packages to automatically do this)
 
-  const { noteTitle, noteText } = req.body;
+  const { title, text } = req.body;
 
-  if (noteTitle && noteText) {
+  // console.log(noteTitle);
+  console.log(title, text);
+
+  if (title && text) {
     const newNote = {
-      noteTitle,
-      noteText,
+      title,
+      text,
     //   note_id: uuid(),
     };
 
