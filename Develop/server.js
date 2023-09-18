@@ -6,7 +6,7 @@ const fs = require("fs");
 // const api = require('./public/assets/js/index.js');
 const noteRecord = require("./db/db.json");
 
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 
 const app = express();
 
