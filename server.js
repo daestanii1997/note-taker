@@ -4,7 +4,7 @@ const fs = require("fs");
 
 // const uuid = require('./helpers/uuid');
 // const api = require('./public/assets/js/index.js');
-const noteRecord = require("./db/db.json");
+const noteRecord = require("./Develop/db/db.json");
 
 const PORT = 3001;
 
