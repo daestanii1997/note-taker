@@ -2,8 +2,6 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 
-// const uuid = require('./helpers/uuid');
-// const api = require('./public/assets/js/index.js');
 const noteRecord = require("./db/db.json");
 
 const PORT = process.env.PORT || 3001;
@@ -18,7 +16,9 @@ app.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "/public/notes.html"))
 );
 
-app.get("/api/notes", (req, res) => res.json(noteRecord));
+app.get("/api/notes", (req, res) => {
+  res.sendFile(path.join(__dirname, "/db/db.json"));
+});
 
 
 app.post("/api/notes", (req, res) => {
@@ -68,7 +68,7 @@ app.post("/api/notes", (req, res) => {
     };
     
     console.log(response);
-    res.status(201).json(response);
+    res.status(201).json(noteRecord);
     
   } else {
     res.status(500).json("Error in posting review");

@@ -6,7 +6,7 @@ A site to save notes to a list, you are able to delete the notes and edit them a
 
 ## Usage
 
-![alt text](Develop/images/Capture.PNG)
+![alt text](images/Capture.PNG)
 
 ## Link
 
